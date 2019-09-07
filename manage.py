@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from flask.ext.script import Manager, Command
-from flask.ext.migrate import MigrateCommand
+from flask_script import Manager, Command
+from flask_migrate import MigrateCommand
 
 from app import create_app
 from tasks import run_celery

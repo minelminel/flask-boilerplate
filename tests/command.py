@@ -1,5 +1,5 @@
 import pytest
-from flask.ext.script import Command
+from flask_script import Command
 
 
 class PytestCommand(Command):

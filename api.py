@@ -1,5 +1,5 @@
 from flask import request
-from flask.ext.restful import Resource, Api
+from flask_restful import Resource, Api
 from werkzeug.exceptions import HTTPException
 
 from database import Document
@@ -11,7 +11,7 @@ class NotFound(HTTPException):
 
 
 class DocumentsApi(Api):
-    
+
     def init_app(self, app):
         super(DocumentsApi, self).init_app(app)
         app.after_request(self.add_cors_headers)
