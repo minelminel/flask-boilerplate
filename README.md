@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sunscrapers/flask-boilerplate.svg?branch=master)](https://travis-ci.org/sunscrapers/flask-boilerplate)
+[![Build Status](https://travis-ci.org/minelminel/flask-boilerplate.svg?branch=master)](https://travis-ci.org/minelminel/flask-boilerplate)
 
 # Flask Boilerplate
 
