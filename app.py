@@ -4,7 +4,7 @@ from celery import Celery
 from flask import Flask
 
 from database import migrate, db
-from api import api
+from resources import api
 
 
 config_variable_name = 'FLASK_CONFIG_PATH'
@@ -32,6 +32,8 @@ def init_app(app):
     db.init_app(app)
     migrate.init_app(app, db)
     api.init_app(app)
+    # this is where the magic happens
+    # avoid contextual errors by including all modules atomically HERE
 
 
 def create_celery_app(app=None):

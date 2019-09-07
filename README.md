@@ -44,3 +44,37 @@ In order to run unit tests in py.test invoke:
 ## Contribution
 
 We are happy to see your way of scaffolding Flask applications. Feel free to submit an issue with your ideas or comments.
+
+```
+.
+├── LICENSE
+├── README.md
+├── api.py
+├── app.py
+├── celerybeat-schedule
+├── config
+│   ├── __init__.py
+│   ├── local.py
+│   ├── staging.py
+│   └── testing.py
+├── database.py
+├── env
+├── manage.py
+├── migrations
+│   ├── README
+│   ├── alembic.ini
+│   ├── env.py
+│   ├── script.py.mako
+│   └── versions
+│       └── 40aa1a9694cf_.py
+├── requirements.txt
+├── tasks.py
+├── tests
+│   ├── __init__.py
+│   ├── client.py
+│   ├── command.py
+│   ├── conftest.py
+│   ├── factories.py
+│   └── test_api.py
+└── wsgi.py
+```
