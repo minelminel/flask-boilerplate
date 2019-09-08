@@ -78,3 +78,11 @@ We are happy to see your way of scaffolding Flask applications. Feel free to sub
 │   └── test_api.py
 └── wsgi.py
 ```
+
+### CI/CD
+1. Local development and testing is performed
+2. Branch is merged into `staging`
+3. New merges trigger automatic builds
+4. If build is successful, auto merge to `master`
+  - upon failing the build/test, a postmortem report is available for analysis and corrective action
+5. Changes to `master` are automatically deployed to production

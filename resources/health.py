@@ -4,7 +4,7 @@ from flask_restful import Resource, Api
 
 class HealthResource(Resource):
     def get(self):
-        return {'running':True}
+        return 'running'
 
     def post(self):
-        return {'running':False}
+        return 'running'
