@@ -1,26 +1,13 @@
 from flask import request
-from flask_restful import Resource, Api
+from flask_restful import Resource
 from werkzeug.exceptions import HTTPException
 
-from database import Document
+from models import Document
 
 
 class NotFound(HTTPException):
     code = 404
     data = {}
-
-
-class DocumentsApi(Api):
-
-    def init_app(self, app):
-        super(DocumentsApi, self).init_app(app)
-        app.after_request(self.add_cors_headers)
-
-    def add_cors_headers(self, response):
-        response.headers.add('Access-Control-Allow-Origin', '*')
-        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-        response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
-        return response
 
 
 class DocumentsResource(Resource):
@@ -50,7 +37,3 @@ class DocumentsResource(Resource):
             raise NotFound()
 
         return entries
-
-
-api = DocumentsApi()
-api.add_resource(DocumentsResource, '/documents/<int:document_id>', '/documents')
