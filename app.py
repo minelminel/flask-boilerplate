@@ -3,7 +3,7 @@ import os
 from celery import Celery
 from flask import Flask
 
-from database import migrate, db
+from models import migrate, db
 from resources import api
 
 
