@@ -1,5 +1,6 @@
 from datetime import timedelta
 
+ENV = 'development'
 DEBUG = True
 SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/flask_example'
 SQLALCHEMY_TRACK_MODIFICATIONS = False

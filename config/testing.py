@@ -1,4 +1,5 @@
 
+ENV = 'testing'
 DEBUG = True
 TESTING = True
 SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/flask_example_test'
