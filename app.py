@@ -24,6 +24,7 @@ def create_app(config_file=None, settings_override=None):
         app.config.update(settings_override)
 
     init_app(app)
+    setup_logging(app)
 
     return app
 
@@ -34,6 +35,14 @@ def init_app(app):
     api.init_app(app)
     # this is where the magic happens
     # avoid contextual errors by including all modules atomically HERE
+
+def setup_logging(app):
+    if not app.debug:
+        import logging
+        from logging import FileHandler
+        handler = FileHandler('flask.log')
+        handler.setLevel(logging.DEBUG)
+        app.logger.addHandler(handler)
 
 
 def create_celery_app(app=None):
