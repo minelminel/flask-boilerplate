@@ -1,12 +1,8 @@
-from flask_migrate import Migrate
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.ext.mutable import MutableDict
 
-
-migrate = Migrate()
-db = SQLAlchemy()
+from .base import db
 
 
 class Document(db.Model):
