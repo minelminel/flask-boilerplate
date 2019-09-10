@@ -36,6 +36,7 @@ def init_app(app):
     # this is where the magic happens
     # avoid contextual errors by including all modules atomically HERE
 
+
 def setup_logging(app):
     if not app.debug:
         import logging
