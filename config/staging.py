@@ -1,7 +1,7 @@
 import os
 from datetime import timedelta
 
-DEBUG = True
+# DEBUG = True
 SQLALCHEMY_DATABASE_URI = os.environ['SQLALCHEMY_DATABASE_URI']
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 CELERY_BROKER_URL = os.environ['CELERY_BROKER_URL']
