@@ -10,7 +10,7 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERYBEAT_SCHEDULE = {
     'example_task': {
-        'task': 'tasks.example_task',
+        'task': 'webapp.tasks.example_task',
         'schedule': timedelta(seconds=10),
         'args': ()
     },

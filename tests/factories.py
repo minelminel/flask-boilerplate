@@ -1,6 +1,6 @@
 import factory
 
-from models import db, Document
+from webapp.models import db, Document
 
 
 class SQLAlchemyModelFactory(factory.Factory):

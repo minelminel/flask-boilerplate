@@ -3,9 +3,10 @@
 from flask_script import Manager, Command
 from flask_migrate import MigrateCommand
 
-from app import create_app
-from tasks import run_celery
-from tests.command import PytestCommand
+from .app import create_app
+from webapp.tasks import run_celery
+# from tests.command import PytestCommand
+from .commands import PytestCommand
 
 
 manager = Manager(create_app)
