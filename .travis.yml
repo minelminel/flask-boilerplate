@@ -11,10 +11,10 @@ services: postgresql
 before_script:
   - psql -c 'create database flask_example_test;' -U postgres
   - psql -c 'create database flask_example;' -U postgres
-  - ./webapp/core/manage.py db init
-  - ./webapp/core/manage.py db upgrade
-  - ./webapp/core/manage.py db migrate
-script: ./webapp/core/manage.py test
+  - ./src/webapp/core/manage.py db init
+  - ./src/webapp/core/manage.py db upgrade
+  - ./src/webapp/core/manage.py db migrate
+script: ./src/webapp/core/manage.py test
 # after_success
 # after_failure:
 # after_script:
