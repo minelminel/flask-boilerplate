@@ -11,7 +11,6 @@ services: postgresql
 before_script:
   - psql -c 'create database flask_example_test;' -U postgres
   - psql -c 'create database flask_example;' -U postgres
-  - webapp db migrate
 script: webapp test
 # after_success
 # after_failure:
