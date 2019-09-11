@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/minelminel/flask-boilerplate.svg?branch=master)](https://travis-ci.org/minelminel/flask-boilerplate)
 
-# Flask Boilerplate :test_tube:
+# Flask Boilerplate :potable_water:
 
 This repository contains a sample minimal Flask application structure that includes:
 
