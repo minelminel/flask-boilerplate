@@ -6,12 +6,11 @@ addons:
   postgresql: "9.4"
 install:
   - pip install -r requirements.txt
-  - pip install -e .
+  - pip install .
 services: postgresql
 before_script:
   - psql -c 'create database flask_example_test;' -U postgres
   - psql -c 'create database flask_example;' -U postgres
-  - webapp db upgrade
 script: webapp test
 # after_success
 # after_failure:
