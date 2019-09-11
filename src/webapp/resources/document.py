@@ -3,7 +3,7 @@ from flask import request
 from flask_restful import Resource
 from werkzeug.exceptions import HTTPException
 
-from models import Document
+from webapp.models import Document
 
 
 class NotFound(HTTPException):

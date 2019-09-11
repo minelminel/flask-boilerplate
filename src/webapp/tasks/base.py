@@ -1,4 +1,4 @@
-from app import create_celery_app
+from webapp.core.app import create_celery_app
 
 celery = create_celery_app()
 

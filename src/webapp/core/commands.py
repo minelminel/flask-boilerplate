@@ -1,7 +1,7 @@
 import pytest
 from flask_script import Command
 
-# deprecated in favor of webapp.core.commands.PytestCommand
+# deprecated in favor of webapp.core.commands.test
 
 class PytestCommand(Command):
     """Runs tests"""
